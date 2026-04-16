@@ -12,8 +12,8 @@ using MvcMovie.Data;
 namespace MvcMovie.Migrations
 {
     [DbContext(typeof(MvcMovieContext))]
-    [Migration("20260320203621_ValidationFix")]
-    partial class ValidationFix
+    [Migration("20260415192028_FinalSeedAndRatingUpdate")]
+    partial class FinalSeedAndRatingUpdate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,6 +33,11 @@ namespace MvcMovie.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18, 2)");
+
+                    b.Property<string>("Rating")
+                        .IsRequired()
+                        .HasMaxLength(5)
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("ReleaseDate")

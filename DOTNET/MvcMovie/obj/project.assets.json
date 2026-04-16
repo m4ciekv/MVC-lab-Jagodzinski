@@ -6458,11 +6458,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/maciekjagodzinski/MVC-lab-Jagodzinski/MvcMovie/MvcMovie.csproj",
+      "projectUniqueName": "/Users/maciekjagodzinski/MVC-lab-Jagodzinski/DOTNET/MvcMovie/MvcMovie.csproj",
       "projectName": "MvcMovie",
-      "projectPath": "/Users/maciekjagodzinski/MVC-lab-Jagodzinski/MvcMovie/MvcMovie.csproj",
+      "projectPath": "/Users/maciekjagodzinski/MVC-lab-Jagodzinski/DOTNET/MvcMovie/MvcMovie.csproj",
       "packagesPath": "/Users/maciekjagodzinski/.nuget/packages/",
-      "outputPath": "/Users/maciekjagodzinski/MVC-lab-Jagodzinski/MvcMovie/obj/",
+      "outputPath": "/Users/maciekjagodzinski/MVC-lab-Jagodzinski/DOTNET/MvcMovie/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/maciekjagodzinski/.nuget/NuGet/NuGet.Config"
@@ -6951,5 +6951,27 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1901",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Pakiet „NuGet.Packaging” 6.12.1 ma znane niska luki w zabezpieczeniach o ważności, https://github.com/advisories/GHSA-g4vj-cjjj-v7hg",
+      "libraryId": "NuGet.Packaging",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1901",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Pakiet „NuGet.Protocol” 6.12.1 ma znane niska luki w zabezpieczeniach o ważności, https://github.com/advisories/GHSA-g4vj-cjjj-v7hg",
+      "libraryId": "NuGet.Protocol",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
 }

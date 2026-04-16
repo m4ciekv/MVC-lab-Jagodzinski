@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/maciekjagodzinski/MVC-lab-Jagodzinski/MvcMovie/MvcMovie.csproj": {}
+    "/Users/maciekjagodzinski/MVC-lab-Jagodzinski/DOTNET/MvcMovie/MvcMovie.csproj": {}
   },
   "projects": {
-    "/Users/maciekjagodzinski/MVC-lab-Jagodzinski/MvcMovie/MvcMovie.csproj": {
+    "/Users/maciekjagodzinski/MVC-lab-Jagodzinski/DOTNET/MvcMovie/MvcMovie.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/maciekjagodzinski/MVC-lab-Jagodzinski/MvcMovie/MvcMovie.csproj",
+        "projectUniqueName": "/Users/maciekjagodzinski/MVC-lab-Jagodzinski/DOTNET/MvcMovie/MvcMovie.csproj",
         "projectName": "MvcMovie",
-        "projectPath": "/Users/maciekjagodzinski/MVC-lab-Jagodzinski/MvcMovie/MvcMovie.csproj",
+        "projectPath": "/Users/maciekjagodzinski/MVC-lab-Jagodzinski/DOTNET/MvcMovie/MvcMovie.csproj",
         "packagesPath": "/Users/maciekjagodzinski/.nuget/packages/",
-        "outputPath": "/Users/maciekjagodzinski/MVC-lab-Jagodzinski/MvcMovie/obj/",
+        "outputPath": "/Users/maciekjagodzinski/MVC-lab-Jagodzinski/DOTNET/MvcMovie/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/maciekjagodzinski/.nuget/NuGet/NuGet.Config"

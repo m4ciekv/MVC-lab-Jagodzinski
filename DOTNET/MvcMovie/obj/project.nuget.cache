@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "35MSg4McI+c=",
+  "dgSpecHash": "ogIPx43VttM=",
   "success": true,
-  "projectFilePath": "/Users/maciekjagodzinski/MVC-lab-Jagodzinski/MvcMovie/MvcMovie.csproj",
+  "projectFilePath": "/Users/maciekjagodzinski/MVC-lab-Jagodzinski/DOTNET/MvcMovie/MvcMovie.csproj",
   "expectedPackageFiles": [
     "/Users/maciekjagodzinski/.nuget/packages/azure.core/1.47.1/azure.core.1.47.1.nupkg.sha512",
     "/Users/maciekjagodzinski/.nuget/packages/azure.identity/1.14.2/azure.identity.1.14.2.nupkg.sha512",
@@ -136,5 +136,30 @@
     "/Users/maciekjagodzinski/.nuget/packages/system.security.cryptography.pkcs/9.0.4/system.security.cryptography.pkcs.9.0.4.nupkg.sha512",
     "/Users/maciekjagodzinski/.nuget/packages/system.security.cryptography.protecteddata/9.0.6/system.security.cryptography.protecteddata.9.0.6.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1901",
+      "level": "Warning",
+      "message": "Pakiet „NuGet.Packaging” 6.12.1 ma znane niska luki w zabezpieczeniach o ważności, https://github.com/advisories/GHSA-g4vj-cjjj-v7hg",
+      "projectPath": "/Users/maciekjagodzinski/MVC-lab-Jagodzinski/DOTNET/MvcMovie/MvcMovie.csproj",
+      "warningLevel": 1,
+      "filePath": "/Users/maciekjagodzinski/MVC-lab-Jagodzinski/DOTNET/MvcMovie/MvcMovie.csproj",
+      "libraryId": "NuGet.Packaging",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1901",
+      "level": "Warning",
+      "message": "Pakiet „NuGet.Protocol” 6.12.1 ma znane niska luki w zabezpieczeniach o ważności, https://github.com/advisories/GHSA-g4vj-cjjj-v7hg",
+      "projectPath": "/Users/maciekjagodzinski/MVC-lab-Jagodzinski/DOTNET/MvcMovie/MvcMovie.csproj",
+      "warningLevel": 1,
+      "filePath": "/Users/maciekjagodzinski/MVC-lab-Jagodzinski/DOTNET/MvcMovie/MvcMovie.csproj",
+      "libraryId": "NuGet.Protocol",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
 }
