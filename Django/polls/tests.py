@@ -6,7 +6,7 @@ from django.urls import reverse
 from .models import Question
 
 def create_question(question_text, days):
-    """Pomocnicza funkcja do tworzenia pytań."""
+    """Pomocnicza funkcja do tworzenia pytań z określoną datą publikacji."""
     time = timezone.now() + datetime.timedelta(days=days)
     return Question.objects.create(question_text=question_text, pub_date=time)
 
