@@ -9,6 +9,11 @@ class Workout(models.Model):
         validators=[MinValueValidator(1), MaxValueValidator(10)]
     ) # 
 
+# Nowa właściwość: przelicza intensywność 1-10 na procenty 10-100%
+    @property
+    def intensywnosc_procent(self):
+        return self.intensywnosc * 10
+    
     def __str__(self):
         return self.nazwa
 # Create your models here.
