@@ -1,0 +1,40 @@
+{% extends 'workouts/base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow border-0 p-4">
+            <div class="card-body">
+                <h3 class="card-title mb-4">
+                    {% if trening %}📝 Edytuj Trening{% else %}➕ Dodaj Nowy Trening{% endif %}
+                </h3>
+                
+                <form method="post">
+                    {% csrf_token %}
+                    
+                    <div class="mb-3">
+                        <label for="nazwa" class="form-label">Nazwa treningu:</label>
+                        <input type="text" name="nazwa" id="nazwa" class="form-control" placeholder="np. Bieganie rano" value="{{ t.nazwa }}{{ trening.nazwa }}" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="rodzaj" class="form-label">Rodzaj aktywności:</label>
+                        <input type="text" name="rodzaj" id="rodzaj" class="form-control" placeholder="np. Cardio, Siłowy" value="{{ t.rodzaj }}{{ trening.rodzaj }}" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="intensywnosc" class="form-label">Intensywność (skala 1-10):</label>
+                        <input type="number" name="intensywnosc" id="intensywnosc" class="form-control" min="1" max="10" placeholder="5" value="{{ t.intensywnosc }}{{ trening.intensywnosc }}" required>
+                        <div class="form-text">Walidacja danych wejściowych w skali od 1 do 10.</div>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between mt-4">
+                        <a href="{% url 'workout_list' %}" class="btn btn-outline-secondary">Anuluj</a>
+                        <button type="submit" class="btn btn-primary">Zapisz Trening</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'workouts/base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow border-0 p-4 border-danger">
+            <div class="card-body text-center">
+                <h3 class="text-danger mb-4">⚠️ Usuwanie Treningu</h3>
+                <p>Czy na pewno chcesz bezpowrotnie usunąć trening: <strong>{{ trening.nazwa }}</strong>?</p>
+                
+                <form method="post" class="mt-4">
+                    {% csrf_token %}
+                    <a href="{% url 'workout_list' %}" class="btn btn-secondary me-2">Anuluj</a>
+                    <button type="submit" class="btn btn-danger">Tak, usuń</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
