@@ -18,12 +18,15 @@ def workout_list(request):
 # 2. Widok dodawania treningu
 def workout_create(request):
     if request.method == "POST":
-        nazwa = request.POST.get('nazwa')
-        rodzaj = request.POST.get('rodzaj')
-        intensywnosc = request.POST.get('intensywnosc')
+        nazwa_treningu = request.POST.get('nazwa')
+        rodzaj_treningu = request.POST.get('rodzaj')
+        intensywnosc_treningu = request.POST.get('intensywnosc')
         
         # Tworzymy i zapisujemy obiekt w modelu
-        Workout.objects.create(nazwa=nazwa, rodzaj=rodzaj, intensywnosc=intensywnosc)
+        Workout.objects.create(
+        nazwa=nazwa_treningu, 
+        rodzaj=rodzaj_treningu, 
+        intensywnosc=intensywnosc_treningu)
         return redirect('workout_list') # Powrót do listy po zapisie
     
     return render(request, 'workouts/form.html')

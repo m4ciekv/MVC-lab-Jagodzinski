@@ -7,7 +7,8 @@
             <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <h2 class="card-title m-0">🏋️ Twoje Aktywności Fizyczne</h2>
-                    </div>
+                    <a href="{% url 'workout_create' %}" class="btn btn-success font-weight-bold">+ Dodaj nowy trening</a>
+                </div>
                 
                 <form method="get" class="mb-4">
                     <div class="input-group">
@@ -26,7 +27,7 @@
                             <th>Nazwa Treningu</th>
                             <th>Rodzaj</th>
                             <th style="width: 35%;">Intensywność</th>
-                        </tr>
+                            <th>Akcje</th> </tr>
                     </thead>
                     <tbody>
                         {% for t in treningi %}
@@ -40,14 +41,18 @@
                                     </div>
                                 </div>
                             </td>
+                            <td>
+                                <a href="{% url 'workout_edit' t.id %}" class="btn btn-sm btn-outline-primary me-1">Edytuj</a>
+                                <a href="{% url 'workout_delete' t.id %}" class="btn btn-sm btn-outline-danger">Usuń</a>
+                            </td>
                         </tr>
                         {% empty %}
                         <tr>
-                            <td colspan="3" class="text-center text-muted p-4">
+                            <td colspan="4" class="text-center text-muted p-4">
                                 {% if request.GET.q %}
                                     Brak wyników pasujących do: "<strong>{{ request.GET.q }}</strong>".
                                 {% else %}
-                                    Brak wpisanych treningów. Dodaj coś w panelu admina!
+                                    Brak wpisanych treningów. Użyj przycisku powyżej, aby dodać pierwszy!
                                 {% endif %}
                             </td>
                         </tr>
