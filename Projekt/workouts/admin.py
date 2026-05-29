@@ -1,13 +1,15 @@
 from django.contrib import admin
-from .models import Workout
+from .models import Workout, Category
+
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('nazwa',)
 
 @admin.register(Workout)
 class WorkoutAdmin(admin.ModelAdmin):
-    # Te kolumny będą widoczne na liście w panelu admina
-    list_display = ('nazwa', 'rodzaj', 'intensywnosc')
     
-    # Dodajemy wyszukiwarkę też w panelu admina
-    search_fields = ('nazwa', 'rodzaj')
+    list_display = ('nazwa', 'category', 'intensywnosc')
     
-    # Dodajemy filtrowanie po boku
-    list_filter = ('rodzaj', 'intensywnosc')
+    search_fields = ('nazwa',)
+    
+    list_filter = ('category', 'intensywnosc')
