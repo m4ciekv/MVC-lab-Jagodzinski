@@ -10,7 +10,7 @@ Projekt zaliczeniowy realizujący system zarządzania aktywnościami fizycznymi,
 
 ## ✨ Funkcjonalności (Wymagania na wyższą ocenę)
 - **Pełny CRUD**: Możliwość dodawania, przeglądania, edycji oraz usuwania treningów bezpośrednio z poziomu interfejsu użytkownika.
-- **Relacyjne Modele (ForeignKey)**: Wydzielenie osobnego modelu dla kategorii treningowych (`Category`) i powiązanie go relacją klucza obcego z głównym modelem treningu (`Workout`).
+- **Relacyjne Modele (ForeignKey)**: Wydzielenie osobnego modegit lu dla kategorii treningowych (`Category`) i powiązanie go relacją klucza obcego z głównym modelem treningu (`Workout`).
 - **Dynamiczny interfejs (Dropdown)**: Formularz dodawania i edycji automatycznie renderuje listę opcji kategorii pobieraną dynamicznie bezpośrednio z bazy danych.
 - **Zaawansowana Wyszukiwarka**: Filtrowanie danych w bazie po nazwie treningu lub powiązanej kategorii przy użyciu obiektów `Q`.
 - **Walidacja danych**: Weryfikacja poprawności wprowadzanej intensywności w skali 1-10 po stronie klienta (HTML5) oraz serwera (Django Validators).
