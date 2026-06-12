@@ -14,17 +14,25 @@
                     
                     <div class="mb-3">
                         <label for="nazwa" class="form-label">Nazwa treningu:</label>
-                        <input type="text" name="nazwa" id="nazwa" class="form-control" placeholder="np. Bieganie rano" value="{{ t.nazwa }}{{ trening.nazwa }}" required>
+                        <input type="text" name="nazwa" id="nazwa" class="form-control" placeholder="np. Bieganie rano" value="{{ trening.nazwa }}" required>
                     </div>
                     
+                    <!-- Dynamiczny dropdown z kategoriami (Wymóg na 5.0) -->
                     <div class="mb-3">
-                        <label for="rodzaj" class="form-label">Rodzaj aktywności:</label>
-                        <input type="text" name="rodzaj" id="rodzaj" class="form-control" placeholder="np. Cardio, Siłowy" value="{{ t.rodzaj }}{{ trening.rodzaj }}" required>
+                        <label for="category" class="form-label">Rodzaj aktywności (Kategoria):</label>
+                        <select name="category" id="category" class="form-select" required>
+                            <option value="" disabled {% if not trening %}selected{% endif %}>-- Wybierz kategorię --</option>
+                            {% for k in kategorie %}
+                                <option value="{{ k.id }}" {% if trening.category.id == k.id %}selected{% endif %}>
+                                    {{ k.nazwa }}
+                                </option>
+                            {% endfor %}
+                        </select>
                     </div>
                     
                     <div class="mb-3">
                         <label for="intensywnosc" class="form-label">Intensywność (skala 1-10):</label>
-                        <input type="number" name="intensywnosc" id="intensywnosc" class="form-control" min="1" max="10" placeholder="5" value="{{ t.intensywnosc }}{{ trening.intensywnosc }}" required>
+                        <input type="number" name="intensywnosc" id="intensywnosc" class="form-control" min="1" max="10" placeholder="5" value="{{ trening.intensywnosc }}" required>
                         <div class="form-text">Walidacja danych wejściowych w skali od 1 do 10.</div>
                     </div>
                     
